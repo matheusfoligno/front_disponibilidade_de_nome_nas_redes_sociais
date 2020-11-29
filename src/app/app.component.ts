@@ -8,23 +8,25 @@ import { SitesResponse } from './model/sitesResponse';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'front-nomedeusuariosdisponiveis';
 
+  userName: string;
   sites: SitesResponse[];
+  spinner: boolean = false;
+  todoValueNoAccents: string;
 
-  constructor(public appService: AppService) {}
-
-  ngOnInit(): void {
-    this.getSites('lallalaalal232131212lll');
-  }
+  constructor(public appService: AppService) { }
 
   getSites(username: string) {
+    this.spinner = true;
     let noSpace = username.replace(/ /g, '');
     let noAccents = noSpace.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     this.appService.getSitesStatusByUserName(noAccents).subscribe(response => {
+      console.log(response);
       this.sites = response;
-      console.log(this.sites);
+      this.spinner = false;
+      this.todoValueNoAccents = noAccents;
     });
   }
 }
