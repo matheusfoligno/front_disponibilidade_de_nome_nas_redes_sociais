@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AppService } from './app.service';
+import { SitesResponse } from './model/sitesResponse';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +8,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'front-nomedeusuariosdisponiveis';
 
-  testes = [
-    {id: 1, name:'Instagram'},
-    {id: 2, name:'Facebook'},
-    {id: 5, name:'Twiiter'}
-  ];
+  sites: SitesResponse[];
+
+  constructor(public appService: AppService) {}
+
+  ngOnInit(): void {
+    this.getSites('lallalaalal232131212lll');
+  }
+
+  getSites(username: string) {
+    let noSpace = username.replace(/ /g, '');
+    let noAccents = noSpace.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    this.appService.getSitesStatusByUserName(noAccents).subscribe(response => {
+      this.sites = response;
+      console.log(this.sites);
+    });
+  }
 }
