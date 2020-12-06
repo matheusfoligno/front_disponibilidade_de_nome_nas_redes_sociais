@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AppService } from './app.service';
-import { SitesResponse } from './model/sitesResponse';
+import { SitesResponse } from './models/sitesResponse';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +9,11 @@ import { SitesResponse } from './model/sitesResponse';
 })
 
 export class AppComponent {
-  title = 'front-nomedeusuariosdisponiveis';
 
-  userName: string;
   sites: SitesResponse[];
   spinner: boolean = false;
   todoValueNoAccents: string;
+  disabledButton = true;
 
   constructor(public appService: AppService) { }
 
@@ -23,10 +22,17 @@ export class AppComponent {
     let noSpace = username.replace(/ /g, '');
     let noAccents = noSpace.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     this.appService.getSitesStatusByUserName(noAccents).subscribe(response => {
-      console.log(response);
       this.sites = response;
       this.spinner = false;
       this.todoValueNoAccents = noAccents;
     });
+  }
+
+  changeInput(inputValue: string) {
+    if (inputValue.length > 0) {
+      this.disabledButton = false;
+    } else {
+      this.disabledButton = true;
+    }
   }
 }

@@ -1,14 +1,14 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { SitesResponse } from 'src/app/model/sitesResponse';
+import { SitesResponse } from 'src/app/models/sitesResponse';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
 
-  apiUrl = 'http://localhost:8080/api/site/';
+  apiUrl = 'https://api-checarnomeusuarios.herokuapp.com/api/site/';
 
   constructor(private httpClient: HttpClient) { }
 

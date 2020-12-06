@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { AdsenseModule } from 'ng2-adsense';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AdsenseModule.forRoot({
+      adClient: 'ca-pub-7640562161899788',
+      adSlot: 7259870550,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
