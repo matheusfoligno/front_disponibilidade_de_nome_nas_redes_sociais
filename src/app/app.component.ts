@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppService } from './app.service';
+import { AppService } from './services/app.service';
 import { SitesResponse } from './models/sitesResponse';
 
 @Component({
