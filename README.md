@@ -21,7 +21,7 @@ Obs: Como foi feito deploy no Heroku na versão gratis, pode acontecer da aplica
 # clonar o repositório:
 git clone https://github.com/matheusfoligno/front_disponibilidade_de_nome_nas_redes_sociais.git
 
-# dentro da pasta do projeto, execute os comando:
+# dentro da pasta do projeto, execute os comandos:
 npm install
 npm start
 ```
