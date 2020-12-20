@@ -1,27 +1,36 @@
-# FrontNomedeusuariosdisponiveis
+# Checar Nome Usuário (Front-end)
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/matheusfoligno/front_disponibilidade_de_nome_nas_redes_sociais/blob/master/LICENSE)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+## Sobre:
+https://checarnomeusuario.com.br/
 
-## Development server
+O projeto tem como finalidade facilitar a busca por nomes de usuários nas redes sociais, você escolhe o nome que quer dar para sua marca e retornamos 
+para você quais redes sociais estão disponiveis.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Back-end: https://github.com/matheusfoligno/disponibilidade_de_nome_nas_redes_sociais
 
-## Code scaffolding
+Obs: Como foi feito deploy no Heroku na versão gratis, pode acontecer da aplicação estar "dormindo" e demorar um pouco na primeira busca.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pré-requisitos:
+- Npm
+- NodeJS
 
-## Build
+## Como executar:
+ - Será executado na porta 4200.
+```bash
+# clonar o repositório:
+git clone https://github.com/matheusfoligno/front_disponibilidade_de_nome_nas_redes_sociais.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# dentro da pasta do projeto, execute os comando:
+npm install
+npm start
+```
+## Tecnologias utilizadas:
+- Angular 10
+- Angular Material
+- Umbler (Deploy)
 
-## Running unit tests
+## Autor:
+Matheus Fernandes Foligno dos Santos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+https://www.linkedin.com/in/matheus-fernandes-17b965161/
