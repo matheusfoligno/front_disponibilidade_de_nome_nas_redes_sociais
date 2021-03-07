@@ -2,7 +2,7 @@
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/matheusfoligno/front_disponibilidade_de_nome_nas_redes_sociais/blob/master/LICENSE)
 
 ## Sobre:
-https://checarnomeusuario.com.br/
+https://front-disponibilidade-de-nome-nas-redes-sociais.vercel.app/
 
 O projeto tem como finalidade facilitar a busca por nomes de usuários nas redes sociais, você escolhe o nome que quer dar para sua marca e retornamos 
 para você quais redes sociais estão disponíveis.
@@ -28,7 +28,7 @@ npm start
 ## Tecnologias utilizadas:
 - Angular 10
 - Angular Material
-- Umbler (Deploy)
+- Vercel (Deploy)
 
 ## Autor:
 Matheus Fernandes Foligno dos Santos
